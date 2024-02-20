@@ -1,0 +1,60 @@
+﻿@{
+    Layout=null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/atrio01.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+    </header>
+    <div class="Div1A">
+        <div class="Div1B">
+
+            <form asp-controller ="home" asp-action="Logar" method="post">
+
+                <div class="Div1B1"><img class="Logo2" src="~/img/logo5.png" /></div>
+                <div class="Div1B2"><input type="email" name="inpEmail" class="inpEmail" onclick="removerPlaceholder()" id="email" placeholder="E-mail" required></div>
+                <div class="Div1B3">
+                    <input type="password" name="inpSenha" class="inpSenha" onclick="removerPlaceholde()" id="senha" placeholder="Senha" required>
+                    <div class="input-group-append">
+                        <button type="button" class="btsEP">ESQUECEU?</button>
+                    </div>
+                </div>
+                <div class="Div1B4"><button type="submit" class="btsEntrar" >Entrar</button></div>
+                <div class="Div1B5"><img  class="fm"src="~/img/forma_login.png" /></div>
+                <div class="Div1B6">
+                    <button type="submit" class="btsCriarC">Criar Conta</button>
+                    <button type="submit" class="btsAjuda">Ajuda</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
+<script>
+   
+
+
+</script>

@@ -1,0 +1,136 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model PacientesModel
+
+<link rel="stylesheet" href="~/css/cadastrop.css?v=1"  asp-append-version="true" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+<di456v class="TelaCadastroPai">
+    
+    <div class="TelaCadastroFilhoA">
+
+        <div class="TelaCadastroNetoA1">
+
+            <form  method="post" asp-controller="Home" asp-action="CadastroP"  class="FormCadPaciente">
+                
+                <label for="DadosPessoais" class="DadosPessoais"><h1>Dados Pessoais</h1></label>
+                    
+                <div class="BtsCompleto">
+                   
+                    <label for="Nome" class="Nome">Nome</label>
+                    <input type="text" class="Inp" asp-for="Nome"  id="nome" placeholder="Primeiro nome">
+                    <span class="text-danger" asp-validation-for="Nome"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="SobreNome" class="Sobrenome">Sobrenome</label>
+                    <input type="text" class="Inp" asp-for="SobreNome" id="SobreNome" placeholder="Sobrenome">
+                    <span class="text-danger" asp-validation-for="SobreNome"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="DataNascimento" class="Datanascimento">Data de nascimento</label>
+                    <input type="text" class="Inp" asp-for="DataNascimento" id="DataNascimento" placeholder="Data de nascimento">
+                    <span class="text-danger" asp-validation-for="DataNascimento"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="EstadoCivil" class="EstadoCivil">Estado Civil</label>
+                    <input type="text" class="Inp" asp-for="EstadoCivil" id="EstadoCivil" placeholder="Estado Civil ">
+                    <span class="text-danger" asp-validation-for="EstadoCivil"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="Genero" class="Genero">Gênero</label>
+                    <input type="text" class="Inp" asp-for="Genero" id="Genero" placeholder="Masc/Fem">
+                    <span class="text-danger" asp-validation-for="Genero"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="CPF" class="NomeRG">CPF</label>
+                    <input type="text" class="Inp" asp-for="CPF" id="CPF" placeholder="000.000.000.00">
+                    <span class="text-danger" asp-validation-for="CPF"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="RG" class="NomeRG">RG</label>
+                    <input type="text" class="Inp" asp-for="RG" id="RG" placeholder="000.000.000.00">
+                    <span class="text-danger"  asp-validation-for="RG"></span>
+                </div>
+
+               <label class="Localizacao"><h1>Localização</h1></label>
+
+                <div class="BtsCompleto">
+                    <label for="Cidade" class="Cidade">Cidade</label>
+                    <input type="text" class="Inp" asp-for="Cidade" id="Cidade" placeholder="Cidade">
+                    <span class="text-danger" asp-validation-for="Cidade"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <labe for="Estado" class="Cidade">Estado</labe>
+                    <input type="text" class="Inp" asp-for="Estado" id="Estado" placeholder="Estado">
+                    <span class="text-danger" asp-validation-for="Estado"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="Endereco" class="Cidadec">Endereço</label>
+                    <input type="text" class="Inp" asp-for="Endereco" id="Endereco" placeholder="Endereço">
+                    <span class="text-danger"  asp-validation-for="Endereco"></span>
+                </div>
+
+                <!-- <label class="Localizacao"><h1>Contato</h1></label>-->
+
+                <div class="BtsCompleto">
+                    <label for="Celular" class="Cidade">Celular</label>
+                    <input type="text" class="Inp" asp-for="Celular" id="Celular" placeholder="(00) 0000000">
+                    <span class="text-danger" asp-validation-for="Celular"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="Email" class="Cidade">E-mail</label>
+                    <input type="text" class="Inp" asp-for="Email" id="Email" placeholder="seue-mail@atrio01.com">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+
+                <div class="BtsCompleto">
+                    <label for="Observacao" class="Cidade">observação</label>
+                    <input type="text" class="Inp" asp-for="Observacao" id="Observacao" placeholder="observação">
+                    <span class="text-danger" asp-validation-for="Observacao"></span>
+                </div>
+
+
+               
+                
+
+            </form>
+
+      
+
+        </div>
+
+        <div class="TelaCadastroNetoA2">
+
+            <label class="Label1">Tudo pronto?</label>
+            <button class="BtsEnviar" id="btnEnviarCadastro" type="button"> Enviar Cadastro</button>
+
+        </div>
+       
+
+    </div>
+
+  
+
+</di456v>
+
+<script>
+    $(document).ready(function () {
+        // Quando o botão de enviar é clicado
+        $("#btnEnviarCadastro").click(function () {
+            // Envia o formulário
+            $(".FormCadPaciente").submit();
+        });
+    });
+</script>

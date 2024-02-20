@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Atrio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/atrio01.styles.css" asp-append-version="true" /> 
+</head>
+<body>
+    <header>
+        
+    </header>
+    <div class="container">
+        <main role="main" class="pb-1">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="MenuPrincipal">
+
+        <div class="btn-group-vertical">
+            
+            <div class="Logo1">
+                <img src="\img\logo1.png" asp-append-version="true" >
+            </div>
+
+            <div class="Logo2">
+                <img src="\img\logo2.png" asp-append-version="true" >
+            </div>
+            
+            <a href="@Url.Action("Index", "Home")" class="btn btn-light text-left">
+                <span class="glyphicon glyphicon-home mr-3"></span>  Home
+            </a>
+
+            <a href="@Url.Action("Notificacao", "Home")" class="btn btn-light text-left">
+                <span class="glyphicon glyphicon-envelope mr-3"></span>  Notificações
+            </a>
+
+            <a href="@Url.Action("Conta", "Home")" class="btn btn-light text-left">
+                <span class="glyphicon glyphicon-user mr-3"></span>  Conta
+            </a>
+            
+            <div class="btn-group dropdown">
+                <button type="button" class="btn btn-secondary btn-light text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pacientes
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="@Url.Action("CadastroP", "Home")">Cadastrar Pacientes</a>
+                    <a class="dropdown-item" href="@Url.Action("ListaP", "Home")">Seus Pacientes</a>
+                </div>
+            </div>
+
+            <div class="btn-group dropdown">
+                <button type="button" class="btn btn-secondary btn-light text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Consultas
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Agendar</a>
+                    <a class="dropdown-item" href="#">Checar Consultas</a>
+                </div>
+            </div>
+            <div class="btn-group dropdown">
+                <button type="button" class="btn btn-secondary btn-light text-left dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Gerencial
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Consultorio</a>
+                    <a class="dropdown-item" href="#">Financeiro</a>
+                    <a class="dropdown-item" href="#">Faturamento</a>
+                    <a class="dropdown-item" href="#">Contabil</a>
+                    <a class="dropdown-item" href="#">Solicitações</a>
+                    <a class="dropdown-item" href="#">Relatorios</a>
+                </div>
+            </div>
+           
+
+            
+        </div>
+            
+
+        
+
+        </div>
+
+    </div>
+    
+    
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

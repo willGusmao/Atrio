@@ -1,0 +1,203 @@
+body {
+  
+    font-size: 17px; 
+    
+}
+.Div1A {
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Div1B {
+    width: 30%;
+    height: 92vh;
+    border-radius: 13px;
+    margin-top: 8vh;
+    box-shadow: -1px 3px 9px 9px #EDEDED;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    DISPLAY: FLEX;
+    PADDING: 34PX;
+}
+.Div1B1 {
+    width: 117px;
+    height: 46px;
+    BORDER-RADIUS: 11px;
+    /* MARGIN-RIGHT: 55PX; */
+    MARGIN-BOTTOM: 80PX
+}
+    .Div1B1 img {
+        width: 117px;
+        height: 46px;
+        object-fit: cover; /* Para cobrir completamente a área da div */
+        display: block;
+        margin-left: 67%;
+    }
+.fm {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para cobrir completamente a área da div */
+    display: block;
+}
+.Div1B2 {
+    width: 100%;
+    height: 46PX;
+    background-color: #F5F5F5;
+    BORDER-RADIUS: 11px;
+    /* MARGIN-RIGHT: 55PX; */
+    MARGIN-BOTTOM: 22PX;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.Div1B3 {
+    width: 100%;
+    height: 46PX;
+    background-color: #F5F5F5;
+    BORDER-RADIUS: 11px;
+    /* MARGIN-RIGHT: 55PX; */
+    MARGIN-BOTTOM: 32PX;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.btsEP {
+    BORDER: NONE;
+    background-color: #cccccc00;
+    COLOR: #9b9a9a;
+    font-family: 'Roboto', sans-serif;
+    /* color: #333; */
+    /* background-color: #fff; */
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+    font-size: 11px;
+}
+    .btsEP:hover {
+        COLOR: gray;
+    }
+.inpSenha {
+    BORDER: NONE;
+    background-color: #cccccc00;
+    COLOR: #9D9D9C;
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Cor do texto */
+    font-size: 15px;
+    width: 100%;
+    outline: none
+}
+.inpEmail {
+    BORDER: NONE;
+    background-color: #cccccc00;
+    COLOR: #9D9D9C;
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Cor do texto */
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+}
+.Div1B4 {
+    width: 100%;
+    height: 46PX;
+    /* background-color: #52D9A7; */
+    BORDER-RADIUS: 11px;
+    /* MARGIN-RIGHT: 55PX; */
+    MARGIN-BOTTOM: 4PX;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.btsEntrar {
+    width: 100%;
+    height: 46PX;
+    color: #f0f5f3;
+    background-color: #52D9A7;
+    border: none;
+    border-radius: 11px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+    font-size: 15px;
+}
+    .btsEntrar:hover {
+        background-color: #78E3C5;
+    }
+
+.Div1B5 {
+    width: 100%;
+    height: 46PX;
+    /* background-color: #52D9A7; */
+    BORDER-RADIUS: 11px;
+    /* MARGIN-RIGHT: 55PX; */
+    MARGIN-BOTTOM: 0PX;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.Div1B6 {
+    width: 100%;
+    height: 46PX;
+    /* background-color: #52D9A7; */
+    BORDER-RADIUS: 11px;
+    /* MARGIN-RIGHT: 55PX; */
+    MARGIN-BOTTOM: 16PX;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.btsCriarC {
+    width: 100%;
+    color: #f0f5f3;
+    background-color: #52D9A7;
+    border: none;
+    border-radius: 11px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+    flex: 2;
+    height: 100%;
+    margin-right: 12px;
+    font-size: 15px;
+}
+    .btsCriarC:hover {
+        background-color: #78E3C5;
+    }
+.btsAjuda {
+    width: 100%;
+    color: #f0f5f3;
+    background-color: #52D9A7;
+    border: none;
+    border-radius: 11px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+    flex: 1;
+    height: 100%;
+    font-size: 15px;
+}
+    .btsAjuda:hover {
+        background-color: #78E3C5;
+    }
+
+
+   
+

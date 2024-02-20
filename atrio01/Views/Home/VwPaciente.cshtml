@@ -1,0 +1,561 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model PacientesModel
+
+<link rel="stylesheet" href="~/css/VwPaciente.css?v=1" asp-append-version="true" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+ 
+ <!-- Máscara de fundo -->
+    <div id="overlay" onclick="closeModal()"></div>
+                                     <!-- MODALS-->
+  <div id="modalEditar" style="display: none;" class="ModalEditar">
+
+    <!-- Conteúdo da mini-página -->
+
+    <div class= "CabecalhoModal">
+        <button  class="btsmodal1" id="cancelar">cancelar</button>
+        <button  class="btsmodal2" asp-action="VwPaciente" id="salvarEdicao">Salvar edição</button>
+    </div>
+
+
+
+    <div class="CorpoModal"> 
+
+
+       <div class="TelaCadastroFilhoA">
+
+             <div class="TelaCadastroNetoA1">
+
+               <form method="Post" asp-controller="Home" asp-action="VwPaciente"  class="FormCadPaciente">
+                    
+                   <label class="DadosPessoais"><h1>Dados Pessoais</h1></label>
+               
+                    <div class="Group1">
+
+                         <div class="BtsCompleto">
+                             
+                             <label  for="nome" class="Nome">Nome</label>
+                             <input type="text" class="Inp"  asp-for="Nome" id="nome" placeholder="Primeiro nome">
+                         </div>
+
+                         <div class="BtsCompleto">
+                             <label  for="SobreNome" class="Sobrenome">Sobrenome</label>
+                             <input type="text" class="Inp"  asp-for="SobreNome" id="SobreNome" placeholder="Sobrenome">
+                         </div>
+
+
+                    </div>
+
+                <div class="Group2">
+                    
+                    <div class="BtsCompleto">
+
+                       <label for="DataNascimento" class="Datanascimento">Data de nascimento</label>
+                       <input type="text" class="Inp" asp-for="DataNascimento"  id="DataNascimento" placeholder="Data de nascimento"> 
+
+                   </div>
+
+                    <div class="BtsCompleto">
+                        <label for="EstadoCivil" class="EstadoCivil">Estado Civil</label>
+                        <input type="text" class="Inp" asp-for="EstadoCivil" id="EstadoCivil" placeholder="Estado Civil "> 
+                    </div>
+
+                </div>
+
+
+                <div class="Group3">
+
+                    <div class="BtsCompleto">
+                         <label for="Genero" class="Genero">Gênero</label>
+                         <input type="text" class="Inp" asp-for="Genero" id="Genero" placeholder="Masc/Fem"> 
+                    </div>
+
+                    <div class="BtsCompleto">
+                        <label for="CPF" class="NomeRG">CPF</label>
+                        <input type="text" class="Inp" asp-for="CPF" id="CPF" placeholder="000.000.000.00"> 
+                    </div>
+
+                    <div class="BtsCompleto">
+                        <label for="RG" class="NomeRG">RG</label>
+                        <input type="text" class="Inp" asp-for="RG" id="RG" placeholder="000.000.000.00"> 
+                    </div>
+
+                </div>
+                
+
+                <label class="Localizacao"><h1>Localização</h1></label>
+
+
+
+                <div class="Group4">
+
+                    <div class="BtsCompleto">
+                        <label for="Cidade" class="Cidade">Cidade</label>
+                         <input type="text" class="Inp" asp-for="Cidade" id="Cidade" placeholder="Cidade">
+                    </div>
+
+                    <div class="BtsCompleto">
+                        <label for="Estado" class="Cidade">Estado</label>
+                        <input type="text" class="Inp" asp-for="Estado" id="Estado" placeholder="Estado">
+                    </div>
+
+                </div>
+
+                <div class="Group7">
+
+                  <div class="BtsCompleto">
+                    <label  for="Endereco" class="Cidadec">Endereço</label>
+                    <input type="text" class="Inp" asp-for="Endereco" id="Endereco" placeholder="Endereço">
+                  </div>
+
+                </div>
+
+                  
+
+
+                    <label class="Localizacao"><h1>Contato</h1></label>
+
+                <div class="Group5">
+
+                    <div class="BtsCompleto">
+                         <label  for="Celular" class="Cidade">Celular</label>
+                         <input type="text" class="Inp" asp-for="Celular" id="Celular" placeholder="(00) 0000000">
+                    </div>
+
+                    <div class="BtsCompleto">
+                         <label for="Email" class="Cidade">E-mail</label>
+                         <input type="text" class="Inp"  asp-for="Email" id="Email" placeholder="seue-mail@atrio01.com"> 
+
+                    </div>
+
+                    <div class="BtsCompleto">
+                        <label for="Observacao" class="Cidade">observação</label>
+                        <input type="text" class="Inp" asp-for="Observacao" id="Observacao" placeholder="observação">
+                    
+                    </div>
+
+
+                </div>   
+
+                
+
+                </form>
+
+            </div>
+
+        
+
+       </div>
+
+
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+</div> <!-- Alterar  -->
+
+
+<div class="DivPaiPaciente">
+    
+    <div class="DivFilhoA">
+
+        <div class="DivNetoA1" >
+            <div class="BNA1A">
+
+                <div class="TBNA1A"></div> 
+
+                <label class="TBNA1B">@Model.Nome </label> <!-- Nome-->
+                
+                
+
+                <div class="TBNA1C"> <!-- Idade Local -->
+
+                    <div class="TTBNA1A"> <!-- Idade-->
+                        <label class="Idade">28</label>
+                        <label class="IdadeText">Idade</label>
+                    </div>
+
+                    <div class="TTBNA1B"></div>
+
+                    <div class="TTBNA1C">
+
+                        <label class="Idade">UK</label>
+                        <label class="IdadeText">Local</label>
+
+                    </div>
+
+                </div>
+
+                <div class="TBNA1D"> <!--Botoes Editar e excluir-->
+
+                    <button  id="BtsEditar" class="BtsEditar">Editar informações</button>
+                    <button id="BtsExcluir" data-url="@Url.Action("Excluir", "Home", new { id = Model.Id_Paciente })" class="BtsExcluir">E</button>
+
+                </div>
+
+            </div>
+        </div>  <!-- Nome--></>
+
+        <div class="DivNetoA2" >
+
+            <div class="BNA1B"> 
+
+                
+
+                <div class="TBNA1B1">   
+
+                     <div class="TBNA1B1A">
+                     
+                         <div class="ballg"> </div>
+                         <label class="TextCa">Cidade</label>
+
+                         <div class="ballg"> </div>
+                         <label class="TextCa">Estado</label>
+
+                         <div class="ballg"> </div>
+                         <label class="TextCa">End</label>
+
+                     </div>
+
+
+                     <div class="TBNA1B1B">
+
+                          
+                         <label class="TextCo">@Model.Cidade</label>
+
+                         
+                         <label class="TextCo">@Model.Estado</label>
+
+                         
+                         <label class="TextCo">@Model.Endereco</label>
+
+                        
+                     </div>
+
+                     
+
+                </div>
+
+
+                <div class="TBNA1B2">
+
+
+                    <div class="TBNA1B1A">
+                     
+                         <div class="ballg"> </div>
+                         <label class="TextCa1">Data de nascimento</label>
+
+                         <div class="ballg"> </div>
+                         <label class="TextCa1">Estado Civil</label>
+
+                         <div class="ballg"> </div>
+                         <label class="TextCa1">Genero</label>
+
+                     </div>
+
+
+                     <div class="TBNA1B1B">
+
+                          
+                         <label class="TextCo1">@Model.DataNascimento</label>
+
+                         
+                         <label class="TextCo1">@Model.EstadoCivil</label>
+
+                         
+                         <label class="TextCo1">@Model.Genero</label>
+
+                        
+                     </div>
+
+
+
+                </div>
+
+
+                <div class="TBNA1B3">
+
+                    
+                    <div class="TBNA1B1A">
+                     
+                         <div class="ballg"> </div>
+                         <label class="TextCa2">CPF</label>
+
+                         <div class="ballg"> </div>
+                         <label class="TextCa2">RG</label>
+
+                         
+
+                     </div>
+
+
+                     <div class="TBNA1B1B">
+
+                          
+                         <label class="TextCo1">@Model.CPF</label>
+
+                         
+                         <label class="TextCo1">@Model.RG</label>
+
+                         
+                         
+
+                        
+                     </div>
+
+
+
+                </div>
+
+
+            </Div>
+
+        </div>  <!-- dados--></>
+
+        <div class="DivNetoA3" >
+            <div class="A3cabeçalho">
+                <label class="A3Anot"> Anotações</label>
+                <botton class="A3btsvertudo">Ver tudo</botton>
+
+            </Div>
+
+            <div class="A3Corpo">
+
+               <div class="A3corpoAnot"></div>
+               <div class= "rodapecorpo" >  <botton class="A3btsalvar">Salvar</botton> </div> 
+
+            </Div>
+
+            <div class="A3rodape">
+
+                <label class="NtsAnt">Notas anteriores:  </label>
+                <div class="A3Rdp1"> 01</div>
+                <div class="A3Rdp1"> 02</div>
+                <div class="A3Rdp1"> 03</div>
+                <div class="A3Rdp1"> 04</div>
+
+
+            </Div>
+    
+        </div>  <!-- anotações--></>
+
+    </div>
+
+    <div class="DivFilhoB">
+
+        <div class="DivNetoB1" >
+
+             <div class="CabAgen">
+
+                <botton class="BtsAgend"> Agendamento </botton>
+                <botton class=" BtsPront"> Prontuario </botton>
+                <botton class="BtsInf"> Informações </botton>
+
+
+            </div>  <!--Cabeãlho-->
+             
+            <div class ="ContAgen">
+
+              <div class="agenda1">
+
+
+                   <div class="Ag1">
+
+                      <div class="stastu1"></div>
+
+
+                  </div>
+
+                  <div class="AgA">
+
+                      <LABEl class="TextAg">27 Jan 15:00</LABEl>
+                      <LABEL class="TextAg1">SEGUNDA</LABEL>
+
+
+                  </div>
+
+
+
+                  <div class="AgB">
+
+                      <LABEL class="TextAg2">Consulta</LABEL>
+                      <LABEL class="TextAg" >Analise de caso</LABEL>
+
+                  </div>
+
+
+                  <div class="AgC">
+
+                      <LABEL class="TextAg2">responsavel</LABEL>
+                      <LABEL class="TextAg">Patricia rodirigues</LABEL>
+
+                  </div>
+
+                  <div class="Ag2">
+
+
+                  </div>
+
+              </div>
+              <div class="agenda1">
+
+
+                   <div class="Ag1">
+
+                      <div class="stastu1"></div>
+
+
+                  </div>
+
+                  <div class="AgA">
+
+                      <LABEl class="TextAg">27 Jan 15:00</LABEl>
+                      <LABEL class="TextAg1">SEGUNDA</LABEL>
+
+
+                  </div>
+
+
+
+                  <div class="AgB">
+
+                      <LABEL class="TextAg2">Consulta</LABEL>
+                      <LABEL class="TextAg" >Analise de caso</LABEL>
+
+                  </div>
+
+
+                  <div class="AgC">
+
+                      <LABEL class="TextAg2">responsavel</LABEL>
+                      <LABEL class="TextAg">Patricia rodirigues</LABEL>
+
+                  </div>
+
+                  <div class="Ag2">
+
+
+                  </div>
+
+              </div>
+
+            </div>
+           
+
+        </div> <!-- Agendamentos -->
+
+
+       <div class="DivNetoB2" > 
+
+
+            <div class= "CorpoNETO2">  
+
+                 <div class="A3cabeçalhoDoc"> <!-- cabeçalho -->
+                    <label class="A3Anot"> Documentos</label>
+                    <botton class="A3btsvertudo">Ver tudo</botton>
+                </div>
+
+                <div class="coporDoc"> <!-- Lista de documentos  -->
+                    <ul>
+                        <li> <div class="IconLi"> IMG</div> 
+                            <div CLASS ="CONTEUD">
+                                <label class="TextDoc">documento1</label>
+                                <label class="dataDoc">27/01/2024</label>
+                            </DIV>
+                        </li>
+
+                         <li> <div class="IconLi"> IMG</div> 
+                            <div CLASS ="CONTEUD">
+                                <label class="TextDoc">documento2</label>
+                                <label class="dataDoc">27/01/2024</label>
+                            </DIV>
+                        </li>
+
+                         <li> <div class="IconLi"> IMG</div> 
+                            <div CLASS ="CONTEUD">
+                                <label class="TextDoc">documento3</label>
+                                <label class="dataDoc">27/01/2024</label>
+                            </DIV>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+
+                <div class="rodapedoc">
+
+                    <botton class="A3btsalvar">Novo</botton>
+
+                </div>
+
+            </div>
+
+        </div>  <!-- D O C U M E N T O S -->
+
+    </div>
+
+
+
+
+
+
+
+</Div>
+
+ <script>
+    $(document).ready(function () {
+        // Quando o botão de edição é clicado
+        $("#BtsEditar").click(function () {
+            // Exibe o overlay e a mini-página (modal) com efeito de fade
+            $("#overlay, #modalEditar").fadeIn();
+        });
+
+        // Quando o botão de salvar na mini-página é clicado
+        $("#salvarEdicao").click(function () {
+            // Execute aqui a lógica para salvar as alterações
+            // ...
+            console.log("Botão Salvar Edição clicado");
+            $(".FormCadPaciente").submit();
+            // Esconda o overlay e a mini-página (modal) com efeito de fade após salvar
+        });
+
+        // CANCELAR EDIÇÃO
+        $("#cancelar").click(function () {
+            // Execute aqui a lógica para salvar as alterações
+            // ...
+            // Esconda o overlay e a mini-página (modal) com efeito de fade após cancelar
+            $("#overlay, #modalEditar").fadeOut();
+        });
+
+        // Quando o botão de excluir é clicado
+        $("#BtsExcluir").click(function () {
+            // Obtém a URL do atributo 'data-url' do botão
+            var url = $(this).data('url');
+
+            // Faz uma requisição AJAX para o método 'Excluir'
+            $.ajax({
+                url: url,
+                type: 'POST',
+                success: function (data) {
+                    // Atualiza a página ou faz algo após a exclusão bem-sucedida
+                    window.location.reload();
+                },
+                error: function () {
+                    // Lida com erros, se necessário
+                    alert("Erro ao excluir o paciente.");
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,510 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+ 
+}
+.MenuPrincipal:hover {
+    width: 15%;
+    display: block;
+}
+.MenuPrincipal {
+    width: 4%;
+    height: 100vh;
+    box-shadow: 5px 0px 15px #EDEDED;
+    /*display: flex;*/
+    align-items: flex-start;
+    justify-content: center;
+    background: #F8F9FA;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    transition: .2s;
+    padding-left: 4px;
+    
+}
+.btn-group.dropdown {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color:#03658C;
+}
+
+.MenuPrincipal:hover .btn-group.dropdown {
+    opacity: 1;
+}
+
+.MenuPrincipal:hover .Logo1 {
+    opacity: 0;
+    display:none;
+}
+.Logo1 {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-top: 51px;
+    margin-left: 8px;
+    margin-bottom: 29px;
+}
+    .Logo1 img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        display: block;
+    }
+
+.Logo2 {
+    transition: opacity 0.5s ease-in-out;
+    width: 105px;
+    height: 45px;
+    position: relative;
+    display: none;
+    margin-top: 40px;
+    margin-left: 8px;
+    margin-bottom: 25px;
+}
+
+    .Logo2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Para cobrir completamente a área da div */
+        display: block;
+    }
+
+
+
+
+
+
+.MenuPrincipal:hover .Logo2 {
+    opacity: 1;
+    display: block;
+}
+
+.Logo2 {
+    opacity: 0;
+    
+}
+
+.btn-light {
+    color: #000 !important; /* Defina a cor do texto para preto !important para priorizar sobre outros estilos */
+    background-color: #f8f9fa !important; /* Defina a cor de fundo desejada !important para priorizar sobre outros estilos */
+    border-color: #f8f9fa !important; /* Defina a cor da borda desejada !important para priorizar sobre outros estilos */
+}
+    .btn-light:hover {
+        color: #808080 !important; /* Defina a cor do texto para preto durante o hover !important para priorizar sobre outros estilos */
+        background-color: #f8f9fa !important; /* Mantenha a cor de fundo inalterada durante o hover !important para priorizar sobre outros estilos */
+        border-color: #f8f9fa !important; /* Mantenha a cor da borda inalterada durante o hover !important para priorizar sobre outros estilos */
+    }
+
+.HomeDivA {
+    width: 91%;
+    height: 100vh;
+    position: absolute;
+}
+
+.HomeDivA3 {
+    /* background-color: red; */
+    color: #03658C;
+    margin-top: 16px;
+  
+}
+
+    .HomeDivA3 ul {
+        /* background-color: red; */
+        list-style: none;
+        color: #03658C;
+        padding: 0;
+        display: flex;
+        FLEX-DIRECTION: row;
+    }
+.ListaMenu li {
+    color: red;
+    margin-left: 0;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+    .ListaMenu li a {
+        color: #03658C; /* Substitua "red" pela cor desejada */
+        display: flex;
+        align-items: center;
+    }
+.icon1 {
+    width: 86px;
+    height: 120px;
+    background-color: red;
+    border-radius: 7px;
+    box-shadow: -3px 3px 15px #EDEDED;
+    align-items: center;
+    padding: 2px;
+    display: flex;
+    margin-right: 14px;
+}
+.icon2 {
+    width: 52px;
+    height: 45px;
+    /* background-color: red; */
+    border-radius: 7px;
+    box-shadow: -3px 3px 15px #EDEDED;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    margin-right: 14px;
+}
+.icon3 {
+    width: 52px;
+    height: 45px;
+    /* background-color: red; */
+    border-radius: 7px;
+    box-shadow: -3px 3px 15px #EDEDED;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    margin-right: 14px;
+}
+.icon4 {
+    width: 52px;
+    height: 45px;
+    /* background-color: red; */
+    border-radius: 7px;
+    box-shadow: -3px 3px 15px #EDEDED;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    margin-right: 14px;
+}
+.icon5 {
+    width: 45px;
+    height: 45px;
+    /* background-color: red; */
+    border-radius: 7px;
+    box-shadow: -3px 3px 15px #EDEDED;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    margin-left: 2px;
+    margin-right: 19px;
+}
+
+.ListaMenu li a .icon {
+    margin-right: 10px; /* Adicionar espaço entre o ícone e o texto (ajuste conforme necessário) */
+}
+.ListaMenu img {
+    
+}
+
+
+.FP {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 458px;
+    height: 100%;
+    /* background-color: #b33939; */
+    padding: 20px;
+    MARGIN-LEFT: 890PX;
+    MARGIN-TOP: -20PX;
+}
+
+    .FP img {
+        object-fit: cover;
+        WIDTH: 100%;
+    HEIGHT: 100VH;
+    }
+.Div1A {
+    background-color: red;
+    width: 100%;
+    height: 100vh;
+}
+.HomeDivA1 {
+    /* background-color: aqua; */
+    width: 509px;
+    height: 150px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 12px;
+    margin-top: 108px;
+    /* margin-bottom: 5px; */
+}
+.HomeDivA1nome {
+   
+    color: #52d9a7;
+}
+.TextAtalhos {
+    color: #03658c;
+    font-size: 19px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.HomeDivA1 {
+    color: #03658c;
+}
+.HomeDivA1nome{
+    font-size:30px;
+}
+.h1T{
+    font-size:30px;
+    margin-bottom:-5px;
+}
+
+.imgicon1{
+    background-color:blue
+}
+
+.TextIcon1 {
+    background-color: aqua
+}
+.AtalhoIcon{
+    
+    width:550px;
+    height:130px;
+    display:flex;
+    
+}
+.Atalho1 {
+    
+    width: 86px;
+    height: 120px;
+    margin-right: 25px;
+    margin-top: 5px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px #888888;
+    display:flex;
+    flex-direction:column;
+    padding:5px
+}
+.Atalho2 {
+    width: 86px;
+    height: 120px;
+    margin-right: 25px;
+    margin-top: 5px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px #888888;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #f6f6f6;
+    
+}
+
+.ImgAtalho1 {
+    width: 100%;
+    height: 50px;
+    justify-items: center;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ImgAtalho1 img {
+    width: 46px;
+    height: 36px;
+}
+.ItextAtalho1 {
+    width: 100%;
+    height: 50px;
+    flex: 1;
+    color: #03658c;
+    /* background-color: aquamarine; */
+    padding: 0px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tabAgenda{
+   
+    width:700px;
+    height:120px;
+    
+}
+
+.BarraPerfil {
+    background-color: #f6f6f6;
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    display:flex;
+    flex-direction:column;
+    
+}
+.B1Perfil {
+    
+    width: 320px;
+    height: 70px;
+    margin-top:46px;
+    display:flex;
+
+}
+.TextPerfil {
+    
+    width: 100%;
+    height: 100%;
+    flex:3;
+    display:flex;
+    flex-direction:column;
+}
+.CalendarioPerfil {
+   
+
+    height: 69px;
+    width: 100%;
+    margin-top: 25px;
+}
+.AgendaDPerfil {
+    
+    height: 100%;
+    width: 100%;
+    margin-top: 15px;
+    padding:20px;
+    padding-top:0px;
+    display:flex;
+    flex-direction:column;
+
+}
+.NotD {
+    background-color: white;
+    height: 120px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius:50px;
+}
+
+.FtPerfil {
+    background-color: #03658c;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 18px;
+}
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+    small
+
+{
+    font-size: 0.5em;
+}
+
+}
+
+.responsive-table {
+    li
+
+{
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.table-header {
+    /* background-color: #95A5A6; */
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    width: 100%;
+    color: #03658c;
+    font-weight: bold;
+    text-align: start;
+    margin: 0px;
+}
+
+.table-row {
+    background-color: #ffffff;
+    box-shadow: -7px 7px 9px 2px rgb(0 0 0 / 10%);
+    width: 100%;
+    height: 51px;
+    font-weight: bold;
+    color: #03658c;
+    place-items: center;
+    border-radius: 8px;
+    text-align: start;
+}
+
+.col-1 {
+    flex-basis: 10%;
+    align-items: center;
+}
+
+.col-2 {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+}
+
+
+.col-4 {
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+}
+.BtsOrd {
+    width: 22px;
+    height: 20px;
+    display: flex;
+    padding: 0px;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BtsOrd1 {
+    background-color: #03658c;
+    width: 11px;
+    height: 15px;
+    clip-path: polygon(50% 20%, 0% 100%, 100% 100%);
+    margin-bottom: 1px;
+    border-radius: 5px;
+}
+
+.BtsOrd2 {
+    background-color: #03658c;
+    width: 11px;
+    height: 15px;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 80%);
+    border-radius: 5px;
+}

@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<PacientesModel>
+
+    <link rel="stylesheet" href="~/css/ListaP.css?v=1" asp-append-version="true" />
+
+
+
+
+<div class="ListaPacientesPai">
+
+    <div class="ListaPacientesFilho1"><img src="~/img/forma 1.png" /></div>
+    <div class="ListaPacientes">
+
+        <!-- Input de Pesquisa -->
+        <div class="PesquisaPaciente">
+
+            <input type="text" id="search" class="PesquisaInp" oninput="filterList()" placeholder="CPF/Paciente">
+            <label for="search" class="BtsPesquisa"><img src="~/img/icons/lupa.png" /></label>
+
+        </div>
+
+        <!-- Lista de Itens -->
+           <div class="ScrollList">
+
+                <div class="containerr">
+                    
+                    <ul class="responsive-table">
+                        <li class="table-header">
+                            <div class="col col-1"></div>
+
+                            <div class="col col-2">
+                                Nome <div class="BtsOrd" onclick="toggleOrder(this, 2)">
+                                        <div class="BtsOrd1"></div>
+                                        <div class="BtsOrd2"></div>
+                                    </div>
+                            </div>
+
+                            <div class="col col-3">
+                                CPF<div class="BtsOrd" onclick="toggleOrder(this, 3)">
+                                    <div class="BtsOrd1"></div>
+                                    <div class="BtsOrd2"></div>
+                                </div>
+                            </div>
+
+                            <div class="col col-4">
+                                Data inclusão<div class="BtsOrd" onclick="toggleOrder(this, 4)">
+                                    <div class="BtsOrd1"></div>
+                                    <div class="BtsOrd2"></div>
+                                </div>
+                            </div>
+                            <div class="col col-5" onclick="toggleOrder(this, 2)">
+                                Status<div class="BtsOrd" >
+                                    <div class="BtsOrd1"></div>
+                                    <div class="BtsOrd2"></div>
+                                </div>
+                            </div>
+                        </li>
+
+                        @if(Model != null) {
+
+                            @foreach(var Pacientes in Model)
+                            
+                                {
+
+
+                                <li class="table-row" onclick="window.location.href='@Url.Action("VwPaciente", "Home", new { id = Pacientes.Id_Paciente })'">
+
+                                        <div class="col col-1" onclick="toggleDiv(this)" data-label="Job Id"><div class="IconItem"><div class="IconItem1"></div></div></div>
+                                        <div class="col col-2" data-label="Customer Name">@Pacientes.Nome</div>
+                                        <div class="col col-3" data-label="Amount">@Pacientes.CPF</div>
+                                        <div class="col col-4" data-label="Payment Status">@Pacientes.DataAlteracao</div>
+                                        <div class="col col-5" data-label="Status">@Pacientes.RG</div>
+                                 </li>
+
+                                }
+                            }
+
+                    </ul>
+                </div>
+            </div>
+    </div>
+
+
+
+        <script>
+            function filterList() {
+                // Obtém o valor do input de pesquisa
+                var input = document.getElementById('search');
+                var filter = input.value.toUpperCase();
+
+                // Obtém a lista de itens
+                var container = document.querySelector('.container');
+
+                // Obtém os itens da lista
+                var rows = container.querySelectorAll('.table-row');
+
+                // Itera sobre os itens e exibe ou oculta conforme a correspondência
+                rows.forEach(function (row) {
+                    var txtValue = row.textContent || row.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+
+            function toggleDiv(element) {
+                // Verifica se a classe atual é 'IconItem'
+                if (element.querySelector('.IconItem')) {
+                    // Substitui por 'IconItemB'
+                    element.innerHTML = '<div class="IconItemB">!<div class="IconItemB2"></div></div>';
+                } else {
+                    // Substitui por 'IconItem'
+                    element.innerHTML = '<div class="IconItem"><div class="IconItem1"></div></div>';
+                }
+            }
+
+        
+
+        
+
+        </script>
+
+
+    </div>
+</div>
